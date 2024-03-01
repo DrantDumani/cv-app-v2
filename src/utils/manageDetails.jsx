@@ -1,9 +1,8 @@
 import { v4 as uuidv4 } from "uuid";
 
 export const createInitDetails = () => {
-  const id = uuidv4();
   const details = {
-    [id]: {
+    personal: {
       fullName: "",
       title: "",
       phoneNum: "",
@@ -23,8 +22,10 @@ export const createNewEdu = () => {
     school: "",
     location: "",
     degree: "",
-    from: "",
-    to: "",
+    startMonth: "January",
+    startYear: "2000",
+    endMonth: "December",
+    endYear: "2010",
     current: false,
     id: id,
   };
@@ -36,8 +37,10 @@ export const createNewExp = () => {
     position: "",
     employer: "",
     location: "",
-    from: "",
-    to: "",
+    startMonth: "January",
+    startYear: "2000",
+    endMonth: "December",
+    endYear: "2010",
     current: false,
     id: id,
   };

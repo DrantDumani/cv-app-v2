@@ -16,6 +16,9 @@ function App() {
     showExperience: false,
     showEducation: false,
   });
+  const [mobileCV, setMobileCV] = useState(false);
+
+  const toggleMobileCV = () => setMobileCV(!mobileCV);
 
   const setExpId = (id) => {
     const newShowForm = { ...showForm, currExpId: id };
@@ -76,7 +79,8 @@ function App() {
     };
     delete newDetails[sectId];
     setDetails(newDetails);
-    const newShowForm = { ...showForm, currExpId: null };
+    const prop = sectionName === "experience" ? "currExpId" : "currEduId";
+    const newShowForm = { ...showForm, [prop]: null };
     setShowForm(newShowForm);
   };
 
@@ -103,6 +107,44 @@ function App() {
 
   return (
     <>
+      {/* <header className="header">
+        <h1 className="header__title">CV Creator</h1>
+      </header>
+
+      <main className="main">
+        <div className="mobile-only">
+          <menu className="toolbar">
+            <li>
+              <button className="toolbar__btn" onClick={toggleMobileCV}>
+                Preview CV
+              </button>
+            </li>
+          </menu>
+
+          {!mobileCV ? (
+            <CVForm
+              editSection={editSection}
+              editPersonal={editPersonal}
+              details={details}
+              expIds={details.experienceIds}
+              addNewExp={addNewExp}
+              addNewEdu={addNewEdu}
+              showPersonal={showForm.showPersonal}
+              showExperience={showForm.showExperience}
+              showEducation={showForm.showEducation}
+              currExpId={showForm.currExpId}
+              currEduId={showForm.currEduId}
+              toggleShowForm={toggleShowForm}
+              deleteSection={deleteSection}
+              setExpId={setExpId}
+              setEduId={setEduId}
+              eduIds={details.educationIds}
+            />
+          ) : (
+            5
+          )}
+        </div>
+      </main> */}
       <CVForm
         editSection={editSection}
         editPersonal={editPersonal}

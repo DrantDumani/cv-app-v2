@@ -6,13 +6,17 @@ export default function InfoWrapper({
   endMonth,
   startYear,
   endYear,
+  title,
   text,
 }) {
   const startStr = `${startMonth} ${startYear}`;
   const endStr = isCurrent ? "Present" : `${endMonth} ${endYear}`;
   return (
     <div className="info-wrapper">
-      <p className="info-wrapper__text">{text}</p>
+      <div className="info-wrapper__flex">
+        <h4 className="info-wrapper__text">{title}</h4>
+        <p className="info-wrapper__text">{text}</p>
+      </div>
       <p className="info-wrapper__text">{`${startStr} - ${endStr}`}</p>
     </div>
   );

@@ -37,6 +37,7 @@ export default function DisplayCV({
         {experience.map((info) => (
           <div key={info.id} className="vitae-section__info">
             <InfoWrapper
+              title={info.employer}
               text={info.position}
               startMonth={info.startMonth}
               startYear={info.startYear}
@@ -61,7 +62,8 @@ export default function DisplayCV({
         {education.map((info) => (
           <div key={info.id} className="vitae-section__info">
             <InfoWrapper
-              text={info.position}
+              title={info.school}
+              text={info.degree}
               startMonth={info.startMonth}
               startYear={info.startYear}
               endMonth={info.endMonth}

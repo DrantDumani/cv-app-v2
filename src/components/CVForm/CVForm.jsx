@@ -134,6 +134,14 @@ export default function CVForm({
                 current={details[currExpId].current}
                 isEndRange={true}
               />
+              <InputWrapper
+                labelText={"Description"}
+                placeholder={"Describe your role"}
+                changeHandler={(e) => editSection(e, currExpId)}
+                inputName={"description"}
+                elementType={"textarea"}
+                value={details[currExpId].description}
+              />
               <SaveBtn clickHandler={() => setExpId(null)} />
             </form>
           ) : (

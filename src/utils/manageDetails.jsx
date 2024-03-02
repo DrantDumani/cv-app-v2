@@ -37,6 +37,7 @@ export const createNewExp = () => {
     position: "",
     employer: "",
     location: "",
+    description: "",
     startMonth: "January",
     startYear: "2000",
     endMonth: "December",

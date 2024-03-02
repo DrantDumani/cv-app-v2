@@ -5,6 +5,7 @@ import {
   createNewExp,
 } from "./utils/manageDetails";
 import CVForm from "./components/CVForm/CVForm";
+import DisplayCV from "./components/DisplayCV/DisplayCV";
 
 function App() {
   const [details, setDetails] = useState(createInitDetails);
@@ -92,6 +93,14 @@ function App() {
     editSection(e, "personal");
   };
 
+  const experience = details.experienceIds.map((id) => {
+    return { ...details[id] };
+  });
+
+  const education = details.educationIds.map((id) => {
+    return { ...details[id] };
+  });
+
   return (
     <>
       <CVForm
@@ -111,6 +120,16 @@ function App() {
         setExpId={setExpId}
         setEduId={setEduId}
         eduIds={details.educationIds}
+      />
+      <DisplayCV
+        name={details.personal.fullName}
+        title={details.personal.title}
+        email={details.personal.email}
+        phone={details.personal.phone}
+        address={details.personal.address}
+        about={details.personal.description}
+        experience={experience}
+        education={education}
       />
     </>
   );

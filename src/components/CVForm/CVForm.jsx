@@ -3,6 +3,7 @@ import FormWrapper from "../FormWrapper/FormWrapper";
 import InputWrapper from "../InputWrapper/InputWrapper";
 import AddSectionBtn from "../AddSectionBtn/AddSectionBtn";
 import TimeRange from "../TimeRange/TimeRange";
+import DeleteSectionBtn from "../DeleteSectionBtn/DeleteSectionBtn";
 
 export default function CVForm({
   editSection,
@@ -15,6 +16,7 @@ export default function CVForm({
   showPersonal,
   showExperience,
   currExpId,
+  deleteSection,
 }) {
   return (
     <div className="form-input-container">
@@ -83,6 +85,9 @@ export default function CVForm({
         >
           {currExpId ? (
             <form className="form-input-container__form">
+              <DeleteSectionBtn
+                clickHandler={() => deleteSection(currExpId, "experience")}
+              />
               <InputWrapper
                 labelText={"Employer"}
                 placeholder={"Geralde Monotoli"}

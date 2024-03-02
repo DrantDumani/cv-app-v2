@@ -65,6 +65,8 @@ function App() {
     };
     delete newDetails[sectId];
     setDetails(newDetails);
+    const newShowForm = { ...showForm, currExpId: null };
+    setShowForm(newShowForm);
   };
 
   const editSection = (e, sectId) => {
@@ -93,6 +95,7 @@ function App() {
         showExperience={showForm.showExperience}
         currExpId={showForm.currExpId}
         toggleShowForm={toggleShowForm}
+        deleteSection={deleteSection}
       />
     </>
   );

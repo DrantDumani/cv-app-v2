@@ -16,6 +16,16 @@ function App() {
     showEducation: false,
   });
 
+  const setExpId = (id) => {
+    const newShowForm = { ...showForm, currExpId: id };
+    setShowForm(newShowForm);
+  };
+
+  const setEduId = (id) => {
+    const newShowForm = { ...showForm, currEduId: id };
+    setShowForm(newShowForm);
+  };
+
   const toggleShowForm = (str) => {
     const newShowForm = {
       ...showForm,
@@ -90,12 +100,17 @@ function App() {
         details={details}
         expIds={details.experienceIds}
         addNewExp={addNewExp}
-        showForm={showForm}
+        addNewEdu={addNewEdu}
         showPersonal={showForm.showPersonal}
         showExperience={showForm.showExperience}
+        showEducation={showForm.showEducation}
         currExpId={showForm.currExpId}
+        currEduId={showForm.currEduId}
         toggleShowForm={toggleShowForm}
         deleteSection={deleteSection}
+        setExpId={setExpId}
+        setEduId={setEduId}
+        eduIds={details.educationIds}
       />
     </>
   );

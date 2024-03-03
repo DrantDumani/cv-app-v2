@@ -1,4 +1,5 @@
 import InfoWrapper from "../InfoWrapper/InfoWrapper";
+import "./DisplayCV.scss";
 
 export default function DisplayCV({
   name,
@@ -12,22 +13,20 @@ export default function DisplayCV({
 }) {
   return (
     <div className="vitae-container">
-      <section className="vitae-section">
-        <div className="vitae-section-flex-wrapper">
-          <h3 className="vitae-section__title">{name}</h3>
-          <p className="vitae-section__text vitae-section__text--big">
-            {title}
-          </p>
+      <section className="vitae-header">
+        <div className="vitae-header__flex-wrapper">
+          <h3 className="vitae-header__title">{name}</h3>
+          <p className="vitae-header__text vitae-header__text--big">{title}</p>
         </div>
 
-        <div className="vitae-section-flex-wrapper">
-          <p className="vitae-section__text">{email}</p>
-          <p className="vitae-section__text">{phone}</p>
-          <p className="vitae-section__text">{address}</p>
+        <div className="vitae-header__flex-wrapper">
+          <p className="vitae-header__text">{email}</p>
+          <p className="vitae-header__text">{phone}</p>
+          <p className="vitae-header__text">{address}</p>
         </div>
       </section>
 
-      <section className="vitae-section">
+      <section className="vitae-section vitae-section--top-pad">
         <h3 className="vitae-section__title">PROFILE</h3>
         <p className="vitae-section__text">{about}</p>
       </section>
@@ -39,13 +38,13 @@ export default function DisplayCV({
             <InfoWrapper
               title={info.employer}
               text={info.position}
+              location={info.location}
               startMonth={info.startMonth}
               startYear={info.startYear}
               endMonth={info.endMonth}
               endYear={info.endYear}
               isCurrent={info.current}
             />
-            <p className="vitae-section__text">{info.location}</p>
             <ul className="vitae-section__list">
               {info.description.split("\n").map((line, ind) => (
                 <li key={ind}>
@@ -64,13 +63,13 @@ export default function DisplayCV({
             <InfoWrapper
               title={info.school}
               text={info.degree}
+              location={info.location}
               startMonth={info.startMonth}
               startYear={info.startYear}
               endMonth={info.endMonth}
               endYear={info.endYear}
               isCurrent={info.current}
             />
-            <p className="vitae-section__text">{info.location}</p>
           </div>
         ))}
       </section>

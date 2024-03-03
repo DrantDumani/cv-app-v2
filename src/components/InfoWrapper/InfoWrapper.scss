@@ -1,0 +1,8 @@
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 1.125rem;
+  }
+}

@@ -146,7 +146,7 @@ function App() {
               name={details.personal.fullName}
               title={details.personal.title}
               email={details.personal.email}
-              phone={details.personal.phone}
+              phone={details.personal.phoneNum}
               address={details.personal.address}
               about={details.personal.description}
               experience={experience}

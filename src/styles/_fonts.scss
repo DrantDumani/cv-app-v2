@@ -26,3 +26,21 @@
   src: url("src/assets/fonts/Oswald-SemiBold.ttf") format("truetype");
   font-weight: 500;
 }
+
+@font-face {
+  font-family: $Garamond;
+  src: url("src/assets/fonts/EBGaramond-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: $Garamond;
+  src: url("src/assets/fonts/EBGaramond-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: $Garamond;
+  src: url("src/assets/fonts/EBGaramond-Bold.ttf") format("truetype");
+  font-weight: 600;
+}

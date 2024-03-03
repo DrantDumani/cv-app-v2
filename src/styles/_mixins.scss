@@ -1,0 +1,11 @@
+@use "./variables" as *;
+
+@mixin btn-style {
+  font-family: $Roboto, monospace;
+  font-weight: 500;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}

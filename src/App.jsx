@@ -6,6 +6,7 @@ import {
 } from "./utils/manageDetails";
 import CVForm from "./components/CVForm/CVForm";
 import DisplayCV from "./components/DisplayCV/DisplayCV";
+import "./App.scss";
 
 function App() {
   const [details, setDetails] = useState(createInitDetails);
@@ -107,20 +108,20 @@ function App() {
 
   return (
     <>
-      {/* <header className="header">
+      <header className="header">
         <h1 className="header__title">CV Creator</h1>
       </header>
 
+      <menu className="toolbar">
+        <li className="toolbar__left-li">
+          <button className="toolbar__btn" onClick={toggleMobileCV}>
+            Preview CV
+          </button>
+        </li>
+      </menu>
+
       <main className="main">
         <div className="mobile-only">
-          <menu className="toolbar">
-            <li>
-              <button className="toolbar__btn" onClick={toggleMobileCV}>
-                Preview CV
-              </button>
-            </li>
-          </menu>
-
           {!mobileCV ? (
             <CVForm
               editSection={editSection}
@@ -141,11 +142,31 @@ function App() {
               eduIds={details.educationIds}
             />
           ) : (
-            5
+            <DisplayCV
+              name={details.personal.fullName}
+              title={details.personal.title}
+              email={details.personal.email}
+              phone={details.personal.phone}
+              address={details.personal.address}
+              about={details.personal.description}
+              experience={experience}
+              education={education}
+            />
           )}
         </div>
-      </main> */}
-      <CVForm
+      </main>
+      <footer className="footer">
+        <p className="footer__text">
+          Made by Darnell. Built in React, SCSS.{" "}
+          <a
+            href="https://github.com/DrantDumani/cv-app-v2"
+            className="footer__link"
+          >
+            Github
+          </a>
+        </p>
+      </footer>
+      {/* <CVForm
         editSection={editSection}
         editPersonal={editPersonal}
         details={details}
@@ -172,7 +193,7 @@ function App() {
         about={details.personal.description}
         experience={experience}
         education={education}
-      />
+      /> */}
     </>
   );
 }

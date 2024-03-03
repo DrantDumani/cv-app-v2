@@ -1,0 +1,28 @@
+@use "./variables" as *;
+
+@font-face {
+  font-family: $Bebas;
+  src: url("src/assets/fonts/BebasNeue-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: $Roboto;
+  src: url("src/assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: $Roboto;
+  src: url("src/assets/fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: $Oswald;
+  src: url("src/assets/fonts/Oswald-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: $Oswald;
+  src: url("src/assets/fonts/Oswald-SemiBold.ttf") format("truetype");
+  font-weight: 500;
+}

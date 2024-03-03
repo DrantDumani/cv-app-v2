@@ -1,0 +1,28 @@
+@use "../../styles/variables" as *;
+@use "src/styles/fonts" as *;
+
+.form-input-container {
+  padding: 1rem;
+  font-family: $Oswald;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.form-wrapper-container {
+  border: 1.4px solid gray;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.form-tab-container {
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+}

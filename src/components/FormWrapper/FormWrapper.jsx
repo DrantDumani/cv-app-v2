@@ -1,3 +1,5 @@
+import "./FormWrapper.scss";
+
 export default function FormWrapper({
   formTitle,
   children,
@@ -9,10 +11,10 @@ export default function FormWrapper({
       <div className="form-wrapper__flex">
         <h2 className="form-wrapper__title">{formTitle}</h2>
         <button onClick={clickHandler} className="form-wrapper__btn">
-          Show
+          {formView ? "Hide" : "Show"}
         </button>
-        {formView && children}
       </div>
+      {formView && children}
     </div>
   );
 }

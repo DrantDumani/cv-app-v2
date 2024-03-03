@@ -1,0 +1,12 @@
+@use "../../styles/mixins" as *;
+
+.add-section-btn {
+  @include btn-style;
+  width: 8.75rem;
+  background-color: #5c4c05;
+  border: 2px solid #806900;
+  color: #fff;
+  &:hover {
+    background-color: #7c6708;
+  }
+}

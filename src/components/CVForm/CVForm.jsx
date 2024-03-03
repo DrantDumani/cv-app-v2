@@ -5,6 +5,7 @@ import TimeRange from "../TimeRange/TimeRange";
 import DeleteSectionBtn from "../DeleteSectionBtn/DeleteSectionBtn";
 import FormTab from "../FormTab/FormTab";
 import SaveBtn from "../SaveBtn/SaveBtn";
+import "./CVForm.scss";
 
 export default function CVForm({
   editSection,
@@ -26,61 +27,63 @@ export default function CVForm({
 }) {
   return (
     <div className="form-input-container">
-      <FormWrapper
-        formTitle={"Personal"}
-        clickHandler={() => toggleShowForm("Personal")}
-        formView={showPersonal}
-      >
-        <form className="form-input-container__form">
-          <InputWrapper
-            labelText={"Full Name"}
-            placeholder={"Porky Minch"}
-            changeHandler={editPersonal}
-            inputName={"fullName"}
-            value={details.personal.fullName}
-          />
-          <InputWrapper
-            labelText={"Title"}
-            placeholder={"King"}
-            changeHandler={editPersonal}
-            inputName={"title"}
-            value={details.personal.title}
-          />
-          <InputWrapper
-            labelText={"Phone Number"}
-            inputType={"tel"}
-            placeholder={"0200651995"}
-            changeHandler={editPersonal}
-            inputName={"phoneNum"}
-            value={details.personal.phoneNum}
-          />
-          <InputWrapper
-            labelText={"Address"}
-            placeholder={"Onett, Eageland"}
-            changeHandler={editPersonal}
-            inputName={"address"}
-            value={details.personal.address}
-          />
-          <InputWrapper
-            labelText={"Email"}
-            inputType={"email"}
-            placeholder={"KingP@Pork.com"}
-            changeHandler={editPersonal}
-            inputName={"email"}
-            value={details.personal.email}
-          />
-          <InputWrapper
-            labelText={"Short Description"}
-            placeholder={"Tell us about yourself."}
-            changeHandler={editPersonal}
-            inputName={"description"}
-            value={details.personal.description}
-            elementType="textarea"
-          />
-        </form>
-      </FormWrapper>
+      <div className="form-wrapper-container">
+        <FormWrapper
+          formTitle={"Personal"}
+          clickHandler={() => toggleShowForm("Personal")}
+          formView={showPersonal}
+        >
+          <form className="form-input-container__form">
+            <InputWrapper
+              labelText={"Full Name"}
+              placeholder={"Porky Minch"}
+              changeHandler={editPersonal}
+              inputName={"fullName"}
+              value={details.personal.fullName}
+            />
+            <InputWrapper
+              labelText={"Title"}
+              placeholder={"King"}
+              changeHandler={editPersonal}
+              inputName={"title"}
+              value={details.personal.title}
+            />
+            <InputWrapper
+              labelText={"Phone Number"}
+              inputType={"tel"}
+              placeholder={"0200651995"}
+              changeHandler={editPersonal}
+              inputName={"phoneNum"}
+              value={details.personal.phoneNum}
+            />
+            <InputWrapper
+              labelText={"Address"}
+              placeholder={"Onett, Eageland"}
+              changeHandler={editPersonal}
+              inputName={"address"}
+              value={details.personal.address}
+            />
+            <InputWrapper
+              labelText={"Email"}
+              inputType={"email"}
+              placeholder={"KingP@Pork.com"}
+              changeHandler={editPersonal}
+              inputName={"email"}
+              value={details.personal.email}
+            />
+            <InputWrapper
+              labelText={"Short Description"}
+              placeholder={"Tell us about yourself."}
+              changeHandler={editPersonal}
+              inputName={"description"}
+              value={details.personal.description}
+              elementType="textarea"
+            />
+          </form>
+        </FormWrapper>
+      </div>
 
-      <div className="add-btn-form-wrapper">
+      <div className="form-wrapper-container">
         {!currExpId && (
           <AddSectionBtn btnText={"Add Experience"} clickHandler={addNewExp} />
         )}{" "}
@@ -159,7 +162,7 @@ export default function CVForm({
         </FormWrapper>
       </div>
 
-      <div className="add-btn-form-wrapper">
+      <div className="form-wrapper-container">
         {!currEduId && (
           <AddSectionBtn btnText={"Add Education"} clickHandler={addNewEdu} />
         )}{" "}

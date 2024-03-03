@@ -1,4 +1,5 @@
 import { useId } from "react";
+import "./InputWrapper.scss";
 
 export default function InputWrapper({
   labelText,
@@ -21,7 +22,7 @@ export default function InputWrapper({
           id={id}
           name={inputName}
           value={value}
-          className="input-container__input--textarea"
+          className="input-container__input input-container__input--textarea"
           required
           placeholder={placeholder}
           onChange={changeHandler}
@@ -33,7 +34,7 @@ export default function InputWrapper({
         <select
           name={inputName}
           id={id}
-          className="select-wrapper__input--select"
+          className="input-container__input input-container__input--select"
           value={value}
           onChange={changeHandler}
           required

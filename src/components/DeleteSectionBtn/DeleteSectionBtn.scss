@@ -1,0 +1,12 @@
+@use "../../styles/mixins" as *;
+
+.del-section-btn {
+  @include btn-style;
+  background-color: #940000;
+  color: #fff;
+  width: 5rem;
+  border: 1px solid #000;
+  &:hover {
+    background-color: #e50000;
+  }
+}

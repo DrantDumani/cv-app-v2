@@ -1,6 +1,7 @@
 import InputWrapper from "../InputWrapper/InputWrapper";
 import { months, getYearlyRange } from "../../utils/dateRange";
 import { useId } from "react";
+import "./TimeRange.scss";
 
 export default function TimeRange({
   title,

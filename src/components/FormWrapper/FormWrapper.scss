@@ -1,0 +1,33 @@
+@use "../../styles/mixins" as *;
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__btn {
+    @include btn-style;
+    background-color: #000;
+    border: 2px solid #806900;
+    color: #fff;
+    min-width: 5rem;
+    &:hover {
+      background-color: #3d3d3d;
+    }
+  }
+}
+
+.form-wrapper-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

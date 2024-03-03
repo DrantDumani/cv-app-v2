@@ -1,0 +1,27 @@
+.time-range-wrapper {
+  &__title {
+    font-size: 1.5rem;
+  }
+}
+
+.select-flex {
+  display: flex;
+  gap: 0.25rem 2.25rem;
+  flex-wrap: wrap;
+}
+
+.checkbox-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+
+  &__checkbox {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &__label {
+    font-size: 1.125rem;
+  }
+}

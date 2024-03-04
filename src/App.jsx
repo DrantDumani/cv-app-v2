@@ -127,29 +127,31 @@ function App() {
         <h1 className="header__title">CV Creator</h1>
       </header>
 
-      <menu className="toolbar">
-        <li className="toolbar__left-li">
-          <button
-            className="toolbar__btn toolbar__btn--mobile-only"
-            onClick={toggleMobileCV}
-          >
-            Preview CV
-          </button>
-        </li>
-        <li>
-          <button className="toolbar__btn" onClick={loadExample}>
-            Load Example
-          </button>
-        </li>
-        <li>
-          <button
-            className="toolbar__btn"
-            onClick={() => downloadPdf(desktopPdf)}
-          >
-            Download CV
-          </button>
-        </li>
-      </menu>
+      <div className="toolbar-wrapper">
+        <menu className="toolbar">
+          <li>
+            <button
+              className="toolbar__btn toolbar__btn--mobile-only"
+              onClick={toggleMobileCV}
+            >
+              Preview CV
+            </button>
+          </li>
+          <li>
+            <button className="toolbar__btn" onClick={loadExample}>
+              Load Example
+            </button>
+          </li>
+          <li>
+            <button
+              className="toolbar__btn"
+              onClick={() => downloadPdf(desktopPdf)}
+            >
+              Download CV
+            </button>
+          </li>
+        </menu>
+      </div>
 
       <main className="main">
         <div className="mobile-only">

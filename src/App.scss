@@ -39,25 +39,25 @@ a {
   &__title {
     text-align: center;
     font-size: 2.5rem;
+    @include desktop {
+      font-size: 4rem;
+      text-align: left;
+      @include tablet-padding;
+    }
   }
 }
 
 .toolbar {
   background-color: $header-nav-colors;
   display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
   border-bottom: 1px solid #000;
   padding: 0.5rem $mob-hor-pad;
   position: sticky;
   top: 0px;
   @include tablet {
     @include tablet-padding;
-  }
-  @include desktop {
-    display: none;
-  }
-
-  &__left-li {
-    margin-left: auto;
   }
 
   &__btn {
@@ -66,6 +66,11 @@ a {
     background-color: #fff6ce;
     &:hover {
       background-color: #fffbeb;
+    }
+    &--mobile-only {
+      @include desktop {
+        display: none;
+      }
     }
   }
 }

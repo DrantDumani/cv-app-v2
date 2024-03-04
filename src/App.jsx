@@ -3,6 +3,7 @@ import {
   createInitDetails,
   createNewEdu,
   createNewExp,
+  example,
 } from "./utils/manageDetails";
 import CVForm from "./components/CVForm/CVForm";
 import DisplayCV from "./components/DisplayCV/DisplayCV";
@@ -114,8 +115,21 @@ function App() {
 
       <menu className="toolbar">
         <li className="toolbar__left-li">
-          <button className="toolbar__btn" onClick={toggleMobileCV}>
+          <button
+            className="toolbar__btn toolbar__btn--mobile-only"
+            onClick={toggleMobileCV}
+          >
             Preview CV
+          </button>
+        </li>
+        <li>
+          <button
+            className="toolbar__btn"
+            onClick={() => {
+              setDetails(example);
+            }}
+          >
+            Load Example
           </button>
         </li>
       </menu>

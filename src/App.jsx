@@ -4,6 +4,7 @@ import {
   createNewEdu,
   createNewExp,
   example,
+  initShowForm,
 } from "./utils/manageDetails";
 import CVForm from "./components/CVForm/CVForm";
 import DisplayCV from "./components/DisplayCV/DisplayCV";
@@ -107,6 +108,11 @@ function App() {
     return { ...details[id] };
   });
 
+  const loadExample = () => {
+    setDetails(example);
+    setShowForm(initShowForm);
+  };
+
   return (
     <>
       <header className="header">
@@ -123,12 +129,7 @@ function App() {
           </button>
         </li>
         <li>
-          <button
-            className="toolbar__btn"
-            onClick={() => {
-              setDetails(example);
-            }}
-          >
+          <button className="toolbar__btn" onClick={loadExample}>
             Load Example
           </button>
         </li>
@@ -211,34 +212,6 @@ function App() {
           </a>
         </p>
       </footer>
-      {/* <CVForm
-        editSection={editSection}
-        editPersonal={editPersonal}
-        details={details}
-        expIds={details.experienceIds}
-        addNewExp={addNewExp}
-        addNewEdu={addNewEdu}
-        showPersonal={showForm.showPersonal}
-        showExperience={showForm.showExperience}
-        showEducation={showForm.showEducation}
-        currExpId={showForm.currExpId}
-        currEduId={showForm.currEduId}
-        toggleShowForm={toggleShowForm}
-        deleteSection={deleteSection}
-        setExpId={setExpId}
-        setEduId={setEduId}
-        eduIds={details.educationIds}
-      />
-      <DisplayCV
-        name={details.personal.fullName}
-        title={details.personal.title}
-        email={details.personal.email}
-        phone={details.personal.phone}
-        address={details.personal.address}
-        about={details.personal.description}
-        experience={experience}
-        education={education}
-      /> */}
     </>
   );
 }

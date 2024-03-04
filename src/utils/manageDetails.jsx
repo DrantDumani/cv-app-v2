@@ -50,6 +50,7 @@ export const createNewExp = () => {
 const job1Id = uuidv4(),
   job2Id = uuidv4(),
   eduId = uuidv4();
+
 export const example = {
   personal: {
     fullName: "Porky Minch",
@@ -98,4 +99,12 @@ export const example = {
     current: false,
     id: eduId,
   },
+};
+
+export const initShowForm = {
+  currExpId: null,
+  currEduId: null,
+  showPersonal: true,
+  showExperience: false,
+  showEducation: false,
 };

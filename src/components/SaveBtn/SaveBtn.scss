@@ -1,0 +1,8 @@
+@use "../../styles/mixins" as *;
+
+.save-btn {
+  @include add-save-btns;
+  &:hover {
+    @include add-save-hover;
+  }
+}

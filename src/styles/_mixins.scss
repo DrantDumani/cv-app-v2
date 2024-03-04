@@ -10,6 +10,18 @@
   cursor: pointer;
 }
 
+@mixin add-save-btns {
+  @include btn-style;
+  width: 8.75rem;
+  background-color: #5c4c05;
+  border: 2px solid #806900;
+  color: #fff;
+}
+
+@mixin add-save-hover {
+  background-color: #7c6708;
+}
+
 @mixin tablet {
   @media (min-width: 768px) {
     @content;

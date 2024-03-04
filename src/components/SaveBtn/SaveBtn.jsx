@@ -1,6 +1,8 @@
+import "./SaveBtn.scss";
+
 export default function SaveBtn({ clickHandler }) {
   return (
-    <button className="add-section-btn" onClick={clickHandler}>
+    <button className="save-btn" onClick={clickHandler}>
       Save
     </button>
   );

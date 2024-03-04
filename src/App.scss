@@ -51,6 +51,8 @@ a {
 .toolbar-wrapper {
   background-color: $header-nav-colors;
   border-bottom: 1px solid #000;
+  position: sticky;
+  top: 0px;
 }
 
 .toolbar {
@@ -58,8 +60,6 @@ a {
   justify-content: flex-end;
   gap: 0.5rem;
   padding: 0.5rem $mob-hor-pad;
-  position: sticky;
-  top: 0px;
   @include tablet {
     @include tablet-padding;
   }

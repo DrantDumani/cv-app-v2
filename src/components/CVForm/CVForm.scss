@@ -25,6 +25,9 @@
   border: 1.4px solid gray;
   border-radius: 4px;
   padding: 1rem;
+  @include desktop {
+    width: 20rem;
+  }
 }
 
 .form-tab-container {

@@ -29,6 +29,9 @@
       @include tablet {
         width: 11.25rem;
       }
+      @include desktop {
+        width: 6.25rem;
+      }
     }
   }
 }

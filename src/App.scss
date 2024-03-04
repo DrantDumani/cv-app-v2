@@ -52,6 +52,9 @@ a {
   @include tablet {
     @include tablet-padding;
   }
+  @include desktop {
+    display: none;
+  }
 
   &__left-li {
     margin-left: auto;
@@ -64,6 +67,21 @@ a {
     &:hover {
       background-color: #fffbeb;
     }
+  }
+}
+
+.mobile-only {
+  @include desktop {
+    display: none;
+  }
+}
+
+.desktop-only {
+  display: none;
+  @include desktop {
+    display: flex;
+    max-width: 80rem;
+    margin: 0 auto;
   }
 }
 

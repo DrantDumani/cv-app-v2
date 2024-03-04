@@ -154,6 +154,37 @@ function App() {
             />
           )}
         </div>
+        <div className="desktop-only">
+          <CVForm
+            editSection={editSection}
+            editPersonal={editPersonal}
+            details={details}
+            expIds={details.experienceIds}
+            addNewExp={addNewExp}
+            addNewEdu={addNewEdu}
+            showPersonal={showForm.showPersonal}
+            showExperience={showForm.showExperience}
+            showEducation={showForm.showEducation}
+            currExpId={showForm.currExpId}
+            currEduId={showForm.currEduId}
+            toggleShowForm={toggleShowForm}
+            deleteSection={deleteSection}
+            setExpId={setExpId}
+            setEduId={setEduId}
+            eduIds={details.educationIds}
+          />
+
+          <DisplayCV
+            name={details.personal.fullName}
+            title={details.personal.title}
+            email={details.personal.email}
+            phone={details.personal.phoneNum}
+            address={details.personal.address}
+            about={details.personal.description}
+            experience={experience}
+            education={education}
+          />
+        </div>
       </main>
       <footer className="footer">
         <p className="footer__text">

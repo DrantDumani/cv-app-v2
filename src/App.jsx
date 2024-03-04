@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   createInitDetails,
   createNewEdu,
@@ -7,7 +7,8 @@ import {
   initShowForm,
 } from "./utils/manageDetails";
 import CVForm from "./components/CVForm/CVForm";
-import DisplayCV from "./components/DisplayCV/DisplayCV";
+import { DisplayCV } from "./components/DisplayCV/DisplayCV";
+import html2pdf from "html2pdf.js";
 import "./App.scss";
 
 function App() {
@@ -20,6 +21,13 @@ function App() {
     showEducation: false,
   });
   const [mobileCV, setMobileCV] = useState(false);
+  const desktopPdf = useRef(null);
+
+  const downloadPdf = (ref) => {
+    const content = ref.current;
+    const options = { filename: "CV.pdf" };
+    html2pdf().set(options).from(content).save();
+  };
 
   const toggleMobileCV = () => setMobileCV(!mobileCV);
 
@@ -133,6 +141,14 @@ function App() {
             Load Example
           </button>
         </li>
+        <li>
+          <button
+            className="toolbar__btn"
+            onClick={() => downloadPdf(desktopPdf)}
+          >
+            Download CV
+          </button>
+        </li>
       </menu>
 
       <main className="main">
@@ -190,6 +206,7 @@ function App() {
           />
 
           <DisplayCV
+            ref={desktopPdf}
             name={details.personal.fullName}
             title={details.personal.title}
             email={details.personal.email}

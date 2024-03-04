@@ -56,7 +56,7 @@ export default function DisplayCV({
         ))}
       </section>
 
-      <section className="vitae-section">
+      <section className="vitae-section vitae-section--bot-pad">
         <h3 className="vitae-section__title">EDUCATION</h3>
         {education.map((info) => (
           <div key={info.id} className="vitae-section__info">

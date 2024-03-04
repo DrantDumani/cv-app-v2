@@ -1,3 +1,5 @@
+@use "../../styles/mixins" as *;
+
 .input-container {
   display: flex;
   flex-direction: column;
@@ -21,6 +23,12 @@
     }
     &--textarea {
       resize: none;
+    }
+
+    &--select {
+      @include tablet {
+        width: 11.25rem;
+      }
     }
   }
 }

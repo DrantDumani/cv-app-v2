@@ -16,6 +16,8 @@ body {
 
 #root {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 ul,
@@ -47,6 +49,9 @@ a {
   padding: 0.5rem $mob-hor-pad;
   position: sticky;
   top: 0px;
+  @include tablet {
+    @include tablet-padding;
+  }
 
   &__left-li {
     margin-left: auto;
@@ -68,6 +73,7 @@ a {
   font-family: $Roboto;
   padding: 2rem $mob-hor-pad;
   text-align: center;
+  margin-top: auto;
 
   &__text {
     font-weight: 500;

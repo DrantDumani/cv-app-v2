@@ -19,7 +19,7 @@ export default function InfoWrapper({
         <p className="info-wrapper__text">{text}</p>
         <p className="info-wrapper__text">{location}</p>
       </div>
-      <p className="info-wrapper__text">{`${startStr} - ${endStr}`}</p>
+      <p className="info-wrapper__text info-wrapper__text--bold">{`${startStr} - ${endStr}`}</p>
     </div>
   );
 }

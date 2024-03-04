@@ -36,14 +36,14 @@ export default function CVForm({
           <form className="form-input-container__form">
             <InputWrapper
               labelText={"Full Name"}
-              placeholder={"Porky Minch"}
+              placeholder={"Enter your name"}
               changeHandler={editPersonal}
               inputName={"fullName"}
               value={details.personal.fullName}
             />
             <InputWrapper
               labelText={"Title"}
-              placeholder={"King"}
+              placeholder={"What is your role"}
               changeHandler={editPersonal}
               inputName={"title"}
               value={details.personal.title}
@@ -51,14 +51,14 @@ export default function CVForm({
             <InputWrapper
               labelText={"Phone Number"}
               inputType={"tel"}
-              placeholder={"0200651995"}
+              placeholder={"Your phone number"}
               changeHandler={editPersonal}
               inputName={"phoneNum"}
               value={details.personal.phoneNum}
             />
             <InputWrapper
               labelText={"Address"}
-              placeholder={"Onett, Eageland"}
+              placeholder={"What is your location"}
               changeHandler={editPersonal}
               inputName={"address"}
               value={details.personal.address}
@@ -66,7 +66,7 @@ export default function CVForm({
             <InputWrapper
               labelText={"Email"}
               inputType={"email"}
-              placeholder={"KingP@Pork.com"}
+              placeholder={"name@example.com"}
               changeHandler={editPersonal}
               inputName={"email"}
               value={details.personal.email}
@@ -99,21 +99,21 @@ export default function CVForm({
               />
               <InputWrapper
                 labelText={"Employer"}
-                placeholder={"Geralde Monotoli"}
+                placeholder={"Who do you work for?"}
                 changeHandler={(e) => editSection(e, currExpId)}
                 inputName={"employer"}
                 value={details[currExpId].employer}
               />
               <InputWrapper
                 labelText={"Position"}
-                placeholder={"Business Aide"}
+                placeholder={"What position did you have?"}
                 changeHandler={(e) => editSection(e, currExpId)}
                 inputName={"position"}
                 value={details[currExpId].position}
               />
               <InputWrapper
                 labelText={"Location"}
-                placeholder={"Fourside, Eagleland"}
+                placeholder={"Employer's location"}
                 changeHandler={(e) => editSection(e, currExpId)}
                 inputName={"location"}
                 value={details[currExpId].location}
